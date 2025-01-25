@@ -7,14 +7,25 @@ namespace BubbleOrNot.Runtime.Audio
     [CreateAssetMenu(menuName = "BubbleOrNot/AudioBundle", fileName = "AudioBundleName")]
     public class AudioBundle : ScriptableObject
     {
+        [Header("Settings")]
         [SerializeField] private AudioClip[] audioClips;
+        
+        [Space]
+        [SerializeField] private bool randomizePitch;
+        [SerializeField] private float minPitchVariation;
+        [SerializeField] private float maxPitchVariation;
         
         
         private int _lastClipIndex;
         private AudioClip _lastClip;
         
         
-        public AudioClip GetRandom
+        public bool RandomizePitch => randomizePitch;
+        public float MinPitchVariation => minPitchVariation;
+        public float MaxPitchVariation => maxPitchVariation;
+        
+        
+        public AudioClip GetClip
         {
             get
             {
