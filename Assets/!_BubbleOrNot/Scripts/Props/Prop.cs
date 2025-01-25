@@ -21,7 +21,7 @@ namespace BubbleOrNot.Runtime
         [SerializeField] private AudioBundle collisionSounds;
 
 
-        private void OnCollisionEnter2D(Collision2D other)
+        protected virtual void OnCollisionEnter2D(Collision2D other)
         {
             if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
         }
