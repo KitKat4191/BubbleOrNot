@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 902763249514611290}
   - component: {fileID: 6391408311321059890}
   - component: {fileID: 5505522367525964520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Prop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,6 +52,7 @@ MonoBehaviour:
   hammerSounds: {fileID: 0}
   needleSounds: {fileID: 0}
   taserSounds: {fileID: 0}
+  collisionSounds: {fileID: 0}
 --- !u!50 &902763249514611290
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499844076620775749}
   - component: {fileID: 4893523895271465165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
