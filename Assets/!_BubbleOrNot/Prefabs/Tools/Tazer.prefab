@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: e5fd53416d9fb8f4da822fd71df7d602, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -255,8 +255,51 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 523356339921375415, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7594083681458496675}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8095760538660122328, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 239904251336107749}
   m_SourcePrefab: {fileID: 100100000, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+--- !u!1 &982250397286169869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095760538660122328, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+  m_PrefabInstance: {fileID: 9077089544658768853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &239904251336107749
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982250397286169869}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.2}
+  serializedVersion: 2
+  m_Radius: 0.2
 --- !u!4 &8843689816835621730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 523356339921375415, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
