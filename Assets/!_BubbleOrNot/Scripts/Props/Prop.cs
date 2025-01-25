@@ -22,12 +22,23 @@ namespace BubbleOrNot.Runtime
         [SerializeField] private AudioBundle collisionSounds;
 
 
+        
+        protected Animator _animator;
+        protected Rigidbody2D _rigidbody;
+
+        
+        private void Awake()
+        {
+            _animator = GetComponent<Animator>();
+            _rigidbody = GetComponent<Rigidbody2D>();
+        }
+        
+        
         protected virtual void OnCollisionEnter2D(Collision2D other)
         {
             if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
         }
-
-
+        
         public virtual void OnToolUsed(ToolType toolType)
         {
             switch (toolType)

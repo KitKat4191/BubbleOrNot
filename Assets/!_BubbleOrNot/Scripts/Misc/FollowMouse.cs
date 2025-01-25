@@ -15,7 +15,9 @@ namespace BubbleOrNot.Runtime
 
         private void Update()
         {
-            transform.position = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 pos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = 0;
+            transform.position = pos;
         }
     }
 }
