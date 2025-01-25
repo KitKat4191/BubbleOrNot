@@ -22,9 +22,9 @@ namespace BubbleOrNot.Runtime
             transform.position = _spawnPosition;
         }
         
-        public void OnUse()
+        public void UseOn(Prop prop)
         {
-            
+            prop.OnToolUsed(toolType);
         }
     }
 }
