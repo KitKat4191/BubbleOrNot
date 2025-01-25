@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1265349599247134828, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6a21c19137e51a1418ac1eb1350fd0dc, type: 2}
     - target: {fileID: 4988810015433880929, guid: 88831912670d10e42a297172fd75a523, type: 3}
       propertyPath: m_Name
       value: Umbrella
