@@ -14,26 +14,24 @@ namespace BubbleOrNot.Runtime
         
         
         private Vector3 _spawnPosition;
+        private Collider _collider;
 
         private void Awake()
         {
             _spawnPosition = transform.position;
+            _collider = GetComponentInChildren<Collider>();
         }
-
-
-        public void Respawn()
-        {
-            transform.position = _spawnPosition;
-        }
+        
 
         public void OnEquipped()
         {
-            
+            _collider.enabled = false;
         }
 
         public void OnUnequipped()
         {
-            
+            _collider.enabled = true;
+            transform.position = _spawnPosition;
         }
 
         public void OnClick(bool pressed)

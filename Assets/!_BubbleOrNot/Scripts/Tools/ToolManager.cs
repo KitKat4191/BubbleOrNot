@@ -71,11 +71,9 @@ namespace BubbleOrNot.Runtime
         private void Unequip()
         {
             if (!_equippedTool) return;
-            
-            _equippedTool.OnUnequipped();
-            
+
             _equippedTool.transform.SetParent(transform);
-            _equippedTool.Respawn();
+            _equippedTool.OnUnequipped();
             _equippedTool = null;
         }
         
