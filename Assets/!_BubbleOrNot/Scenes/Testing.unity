@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240928191}
   - component: {fileID: 240928192}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Needle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866366868}
   - component: {fileID: 866366869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite-needle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013064524}
   - component: {fileID: 1013064525}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1457267589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
