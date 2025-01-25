@@ -31,11 +31,19 @@ namespace BubbleOrNot.Runtime
 
             if (!toolManager) return;
             
-            var prop = rayHit.collider.GetComponent<Prop>();
-            if (prop) toolManager.OnClickedProp(prop);
-            
-            var tool = rayHit.collider.GetComponent<Tool>();
-            if (tool) toolManager.OnClickedTool(tool);
+            string tag = rayHit.collider.gameObject.tag;
+
+            switch (tag)
+            {
+                case "Prop":
+                    var prop = rayHit.collider.GetComponent<Prop>();
+                    if (prop) toolManager.OnClickedProp(prop);
+                    break;
+                case "Tool":
+                    var tool = rayHit.collider.GetComponent<Tool>();
+                    if (tool) toolManager.OnClickedTool(tool);
+                    break;
+            }
         }
 
         public void OnDrop(InputAction.CallbackContext context)
