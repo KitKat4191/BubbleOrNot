@@ -60,6 +60,22 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: alienSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: taserSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: hammerSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: needleSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
