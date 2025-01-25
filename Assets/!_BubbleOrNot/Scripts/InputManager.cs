@@ -36,11 +36,11 @@ namespace BubbleOrNot.Runtime
             switch (tag)
             {
                 case "Prop":
-                    var prop = rayHit.collider.GetComponent<Prop>();
+                    var prop = rayHit.collider.GetComponentInParent<Prop>();
                     if (prop) toolManager.OnClickedProp(prop);
                     break;
                 case "Tool":
-                    var tool = rayHit.collider.GetComponent<Tool>();
+                    var tool = rayHit.collider.GetComponentInParent<Tool>();
                     if (tool) toolManager.OnClickedTool(tool);
                     break;
             }
