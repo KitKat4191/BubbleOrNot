@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System.Diagnostics;
+using BubbleOrNot.Runtime.Audio;
 
 namespace BubbleOrNot.Runtime
 {
@@ -17,18 +18,9 @@ namespace BubbleOrNot.Runtime
             _stopwatch = new Stopwatch();
             _stopwatch.Start();
         }
-        
-        protected override void OnCollisionEnter2D(Collision2D other)
-        {
-            base.OnCollisionEnter2D(other);
-            Pop();
-        }
 
-        public override void OnToolUsed(ToolType toolType)
-        {
-            base.OnToolUsed(toolType);
-            Pop();
-        }
+        protected override void OnCollisionEnter2D(Collision2D _) => Pop();
+        public override void OnToolUsed(ToolType toolType) => Pop();
 
         private void Pop()
         {
@@ -37,6 +29,8 @@ namespace BubbleOrNot.Runtime
             _rigidbody.isKinematic = true;
             _animator.SetTrigger("Pop");
             Destroy(gameObject, timeBeforeDestroy);
+            
+            if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
         }
     }
 }
