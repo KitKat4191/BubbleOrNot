@@ -10,16 +10,17 @@ namespace BubbleOrNot.Runtime
         
         
         [SerializeField] private ToolType toolType;
-        [SerializeField] private Animator animator;
         
         
         private Vector3 _spawnPosition;
         private Collider2D _collider;
+        private Animator _animator;
 
         private void Awake()
         {
             _spawnPosition = transform.position;
             _collider = GetComponentInChildren<Collider2D>();
+            _animator = GetComponent<Animator>();
         }
         
 
@@ -36,7 +37,7 @@ namespace BubbleOrNot.Runtime
 
         public void OnClick(bool pressed)
         {
-            animator.SetBool(Using, pressed);
+            _animator.SetBool(Using, pressed);
             
             if (!pressed) return;
             if (!TryGetProp(out Prop prop)) return;
