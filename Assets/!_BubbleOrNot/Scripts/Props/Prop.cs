@@ -14,6 +14,9 @@ namespace BubbleOrNot.Runtime
     
     public class Prop : MonoBehaviour
     {
+        [Header("Settings")]
+        [SerializeField] protected bool isFlushable = true;
+        
         [Header("Audio Settings")]
         [SerializeField] protected AudioBundle alienSounds;
         [SerializeField] protected AudioBundle hammerSounds;
@@ -38,6 +41,8 @@ namespace BubbleOrNot.Runtime
         {
             if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
         }
+
+        public bool IsFlushable => isFlushable;
         
         public virtual void OnToolUsed(ToolType toolType)
         {
