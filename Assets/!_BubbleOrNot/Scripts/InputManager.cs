@@ -40,7 +40,8 @@ namespace BubbleOrNot.Runtime
 
         public void OnDrop(InputAction.CallbackContext context)
         {
-            toolManager.OnDrop();
+            if (context.started) toolManager.OnDrop(true);
+            if (context.canceled) toolManager.OnDrop(false);
         }
     }
 }
