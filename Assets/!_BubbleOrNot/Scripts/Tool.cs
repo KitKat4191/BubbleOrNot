@@ -21,10 +21,10 @@ namespace BubbleOrNot.Runtime
         {
             transform.position = _spawnPosition;
         }
-        
-        public void UseOn(Prop prop)
+
+        public void OnClick(bool pressed)
         {
-            prop.OnToolUsed(toolType);
+            
         }
     }
 }
