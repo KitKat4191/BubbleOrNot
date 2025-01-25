@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 902763249514611290, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: m_Mass
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 902763249514611290, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_LinearDrag
       value: 1
       objectReference: {fileID: 0}
