@@ -788,6 +788,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3832930612319570537, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
   m_PrefabInstance: {fileID: 1608593856}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2086150722 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3132126340288428862, guid: 2d0c523b337eda04888d292760b62696, type: 3}
+  m_PrefabInstance: {fileID: 3037416045867897903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1476319680529541981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1309,23 +1314,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2470380}
+      objectReference: {fileID: 2086150722}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpawnNextProp
+      value: SetTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BubbleOrNot.Runtime.PropManager, Assembly-CSharp
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Close
       objectReference: {fileID: 0}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
