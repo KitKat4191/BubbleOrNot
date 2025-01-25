@@ -22,7 +22,7 @@ namespace BubbleOrNot.Runtime
             if (!prop) return;
             if (!_equippedTool) return;
             
-            _equippedTool.transform.SetParent(mouseFollower);
+            _equippedTool.UseOn(prop);
         }
 
         public void OnClick(bool pressed)
