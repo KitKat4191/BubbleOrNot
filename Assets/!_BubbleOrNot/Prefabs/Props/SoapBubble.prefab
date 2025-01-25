@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 1507351937, guid: 1161a289b71251c4d9c56d0e147b9b15, type: 3}
     - target: {fileID: 4893523895271465165, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5505522367525964520, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Controller
@@ -119,4 +119,4 @@ MonoBehaviour:
   needleSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
   taserSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
   collisionSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
-  timeBeforeDestroy: 0
+  timeBeforeDestroy: 0.2
