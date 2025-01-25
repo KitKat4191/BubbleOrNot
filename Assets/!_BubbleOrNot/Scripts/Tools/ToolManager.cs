@@ -27,20 +27,14 @@ namespace BubbleOrNot.Runtime
 
         public void OnClick(bool pressed)
         {
-            if (_equippedTool) _equippedTool.OnClick(pressed);
+            if (_equippedTool)
+            {
+                _equippedTool.OnClick(pressed);
+                return;
+            }
             
             if (!pressed) return;
-            
-            RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-            Collider2D hitCollider = rayHit.collider;
-            if (!hitCollider) return;
-            
-            Debug.Log("Clicked collider with name: " + hitCollider.name);
-            
-            if (!hitCollider.gameObject.layer.IsInMask(toolClickLayerMask)) return;
-            
-            var tool = hitCollider.GetComponent<Tool>();
-            if (tool) EquipTool(tool);
+            if (TryGetTool(out Tool newTool)) EquipTool(newTool);
         }
 
         public void OnDrop(bool pressed)
@@ -77,6 +71,30 @@ namespace BubbleOrNot.Runtime
             _equippedTool.transform.SetParent(transform);
             _equippedTool.OnUnequipped();
             _equippedTool = null;
+        }
+
+        private const int _COLLIDER_BUFFER_LENGTH = 10;
+        private readonly Collider2D[] _colliderBuffer = new Collider2D[_COLLIDER_BUFFER_LENGTH];
+        private bool TryGetTool(out Tool tool)
+        {
+            tool = null;
+
+            Vector3 pos = _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            pos.z = 0;
+            
+            int count = Physics2D.OverlapCircleNonAlloc(pos, 0.1f, _colliderBuffer, LayerMask.GetMask("Tool"));
+            if (count <= 0) return false;
+            
+            if (count >= _COLLIDER_BUFFER_LENGTH)
+                count = _COLLIDER_BUFFER_LENGTH;
+
+            for (int i = 0; i < count; i++)
+            {
+                tool = _colliderBuffer[i].GetComponent<Tool>();
+                if (tool) break;
+            }
+            
+            return tool;
         }
         
         #endregion // INTERNAL
