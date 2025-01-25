@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943648463867402511}
-  - component: {fileID: 2743169418120721185}
+  - component: {fileID: 6074805435541134893}
   - component: {fileID: 902763249514611290}
   - component: {fileID: 6391408311321059890}
   - component: {fileID: 5505522367525964520}
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 1499844076620775749}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2743169418120721185
+--- !u!114 &6074805435541134893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635126611095737109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f2eec50fb548d943a3c9ab1ba40d02b, type: 3}
+  m_Script: {fileID: 11500000, guid: 524ca12e47b2a3a429b374f3ca00dafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   alienSounds: {fileID: 0}
