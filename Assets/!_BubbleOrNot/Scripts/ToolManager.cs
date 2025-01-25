@@ -21,5 +21,17 @@ namespace BubbleOrNot.Runtime
             if (!prop) return;
             if (!_currentTool) return;
         }
+
+        public void OnClick(bool pressed)
+        {
+            
+        }
+
+        public void OnDrop(bool pressed)
+        {
+            if (!pressed) return;
+            
+            
+        }
     }
 }
