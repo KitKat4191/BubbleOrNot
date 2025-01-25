@@ -47,7 +47,7 @@ namespace BubbleOrNot.Runtime
         {
             if (!pressed) return;
             
-            DeEquip();
+            Unequip();
         }
         
         #endregion // INPUT
@@ -59,16 +59,20 @@ namespace BubbleOrNot.Runtime
         {
             if (!tool) return;
             
-            DeEquip();
-
+            Unequip();
+            
             _equippedTool = tool;
             _equippedTool.transform.SetParent(mouseFollower);
             _equippedTool.transform.localPosition = Vector3.zero;
+            
+            _equippedTool.OnEquipped();
         }
         
-        private void DeEquip()
+        private void Unequip()
         {
             if (!_equippedTool) return;
+            
+            _equippedTool.OnUnequipped();
             
             _equippedTool.transform.SetParent(transform);
             _equippedTool.Respawn();
