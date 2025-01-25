@@ -39,7 +39,7 @@ namespace BubbleOrNot.Runtime
             
             if (!hitCollider.gameObject.layer.IsInMask(toolClickLayerMask)) return;
             
-            var tool = hitCollider.GetComponentInParent<Tool>();
+            var tool = hitCollider.GetComponent<Tool>();
             if (tool) EquipTool(tool);
         }
 
@@ -57,8 +57,6 @@ namespace BubbleOrNot.Runtime
         
         private void EquipTool(Tool tool)
         {
-            if (!tool) return;
-            
             Unequip();
             
             _equippedTool = tool;
@@ -66,12 +64,16 @@ namespace BubbleOrNot.Runtime
             _equippedTool.transform.localPosition = Vector3.zero;
             
             _equippedTool.OnEquipped();
+            
+            Debug.Log($"Equipped tool '{_equippedTool.name}'");
         }
         
         private void Unequip()
         {
             if (!_equippedTool) return;
 
+            Debug.Log($"Unequipping tool '{_equippedTool.name}'");
+            
             _equippedTool.transform.SetParent(transform);
             _equippedTool.OnUnequipped();
             _equippedTool = null;
