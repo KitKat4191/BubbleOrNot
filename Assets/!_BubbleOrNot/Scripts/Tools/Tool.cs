@@ -10,6 +10,8 @@ namespace BubbleOrNot.Runtime
         
         
         [SerializeField] private ToolType toolType;
+        [SerializeField] private bool repeatUseWhileHeld;
+        [SerializeField] private float repeatInterval = 0.5f;
         
         
         private Vector3 _spawnPosition;
@@ -30,7 +32,7 @@ namespace BubbleOrNot.Runtime
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!TryGetProp(other, out _currentProp)) return;
-            if (_isUsing) _currentProp.OnToolUsed(toolType);
+            if (_isUsing && _currentProp) _currentProp.OnToolUsed(toolType);
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -39,6 +41,18 @@ namespace BubbleOrNot.Runtime
             if (prop != _currentProp) return;
             
             _currentProp = null;
+        }
+
+
+        private float _elapsedTime;
+        private void Update()
+        {
+            if (!_isUsing) return;
+            if (!repeatUseWhileHeld) return;
+            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime < repeatInterval) return;
+            _elapsedTime = 0;
+            if (_currentProp) _currentProp.OnToolUsed(toolType);
         }
 
 
@@ -66,9 +80,7 @@ namespace BubbleOrNot.Runtime
             if (_currentProp)
                 _currentProp.OnToolUsed(toolType);
         }
-
         
-        private readonly Collider2D[] _colliderBuffer = new Collider2D[10];
         private static bool TryGetProp(Collider2D other, out Prop prop)
         {
             prop = other.GetComponentInParent<Prop>();
