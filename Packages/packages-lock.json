@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.livedimensions.vrrefassist": {
+      "version": "https://github.com/LiveDimensions/VRRefAssist.git?path=/Packages/com.livedimensions.vrrefassist",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c5c56b8d2b5af1c44296d2a882fb285a957cdd86"
+    },
     "com.unity.2d.animation": {
       "version": "9.1.2",
       "depth": 1,
