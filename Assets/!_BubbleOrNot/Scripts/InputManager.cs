@@ -7,6 +7,9 @@ namespace BubbleOrNot.Runtime
     [AddComponentMenu("")]
     public class InputManager : MonoBehaviour
     {
+        [SerializeField] private ToolManager toolManager;
+        
+        
         private Camera _mainCamera;
 
         private void Awake()
@@ -16,12 +19,14 @@ namespace BubbleOrNot.Runtime
 
         public void OnClick(InputAction.CallbackContext context)
         {
-            if (!context.started) return;
-            
-            RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-            if (!rayHit.collider) return;
-            
-            Debug.Log(rayHit.collider.gameObject.name);
+            if (context.started) toolManager.OnClick(true);
+            if (context.canceled) toolManager.OnClick(false);
+        }
+
+        public void OnDrop(InputAction.CallbackContext context)
+        {
+            if (context.started) toolManager.OnDrop(true);
+            if (context.canceled) toolManager.OnDrop(false);
         }
     }
 }

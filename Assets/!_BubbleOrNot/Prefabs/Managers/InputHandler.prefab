@@ -74,6 +74,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 072f17fa-d074-4dfd-9bef-0e85188ec3de
     m_ActionName: Gameplay/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2135443063283249495}
+        m_TargetAssemblyTypeName: BubbleOrNot.Runtime.InputManager, Assembly-CSharp
+        m_MethodName: OnDrop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 232768ed-5d26-4ef7-962f-10d1ec491042
+    m_ActionName: Gameplay/Drop[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -91,3 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c3090ee6c2ca34d9a1f20c1d522eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toolManager: {fileID: 0}

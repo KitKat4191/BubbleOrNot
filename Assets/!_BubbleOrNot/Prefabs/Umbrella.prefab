@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1265349599247134828, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 6a21c19137e51a1418ac1eb1350fd0dc, type: 2}
     - target: {fileID: 4988810015433880929, guid: 88831912670d10e42a297172fd75a523, type: 3}
       propertyPath: m_Name
       value: Umbrella
@@ -60,6 +64,22 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: alienSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: taserSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: hammerSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+    - target: {fileID: 8203035417015321363, guid: 88831912670d10e42a297172fd75a523, type: 3}
+      propertyPath: needleSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

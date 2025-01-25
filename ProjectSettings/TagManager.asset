@@ -6,15 +6,16 @@ TagManager:
   tags:
   - Prop
   - Room
+  - Tool
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Environment
   - Water
   - UI
-  - 
-  - 
+  - Tool
+  - Prop
   - 
   - 
   - 
