@@ -12,7 +12,7 @@ namespace BubbleOrNot.Runtime
         Taser,
     }
     
-    public abstract class Prop : MonoBehaviour
+    public class Prop : MonoBehaviour
     {
         [SerializeField] private AudioBundle alienSounds;
         [SerializeField] private AudioBundle hammerSounds;
