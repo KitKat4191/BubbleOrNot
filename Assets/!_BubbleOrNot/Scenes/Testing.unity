@@ -293,6 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 101272574}
+  - component: {fileID: 101272575}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -315,6 +316,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180548928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &101272575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101272573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c465e08e6cd6d99439cae862fd3fcc9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propManager: {fileID: 2470380}
 --- !u!1 &176927909
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,9 +480,37 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 435227676, guid: efd2067a2c1bd024eaa547a077a1255f, type: 3}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 101272575}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsNotBubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BubbleOrNot.Runtime.ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7736095289846392514, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: m_Name
-      value: NoButton
+      value: IsNotBubbleButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1065,9 +1107,37 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 399b7930777c2e5438ba1e2ef4e7ae1e, type: 2}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 101272575}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsBubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BubbleOrNot.Runtime.ScoreManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7736095289846392514, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: m_Name
-      value: YesButton
+      value: IsBubbleButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
