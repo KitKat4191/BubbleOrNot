@@ -11,19 +11,36 @@ namespace BubbleOrNot.Runtime
         
         
         private int _lastClipIndex;
+        private AudioClip _lastClip;
         
         
         public AudioClip GetRandom
         {
             get
             {
-                _lastClipIndex++;
-                if (_lastClipIndex >= audioClips.Length)
+                int newClipIndex = _lastClipIndex + 1;
+                
+                if (newClipIndex >= audioClips.Length)
                 {
-                    _lastClipIndex = 0;
+                    newClipIndex = 0;
                     audioClips.Shuffle();
                 }
-                return audioClips[_lastClipIndex];
+                
+                AudioClip clipToReturn = audioClips[newClipIndex];
+
+                if (clipToReturn == _lastClip)
+                {
+                    newClipIndex++;
+                    if (newClipIndex >= audioClips.Length)
+                        newClipIndex = 0;
+                    
+                    clipToReturn = audioClips[newClipIndex];
+                }
+                
+                _lastClipIndex = newClipIndex;
+                _lastClip = clipToReturn;
+                
+                return clipToReturn;
             }
         }
     }
