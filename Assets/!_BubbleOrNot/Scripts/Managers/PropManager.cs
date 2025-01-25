@@ -13,6 +13,11 @@ namespace BubbleOrNot.Runtime
         [SerializeField] private Transform propDispenser;
         [SerializeField] private Animator pipeAnimator;
         [SerializeField] private float pipeAnimationDuration = 1f;
+
+        [Header("Spawn Settings")]
+        [SerializeField] private Vector2 spawnVelocity;
+        [SerializeField] private float minSpawnRotationSpeed;
+        [SerializeField] private float maxSpawnRotationSpeed;
         
         
         [SerializeField, HideInInspector, GetComponentsInChildren] private Prop[] props;
@@ -37,7 +42,13 @@ namespace BubbleOrNot.Runtime
         {
             yield return new WaitForSeconds(waitTime);
             
-            Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
+            Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
+            newProp.gameObject.SetActive(true);
+            
+            var rb = newProp.GetComponent<Rigidbody2D>();
+            rb.velocity = spawnVelocity;
+            rb.angularVelocity = Random.Range(minSpawnRotationSpeed, maxSpawnRotationSpeed);
+            
             _currentPropIndex++;
 
             if (_currentPropIndex >= props.Length)
