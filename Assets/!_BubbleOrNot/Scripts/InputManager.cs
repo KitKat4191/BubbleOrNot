@@ -21,29 +21,6 @@ namespace BubbleOrNot.Runtime
         {
             if (context.started) toolManager.OnClick(true);
             if (context.canceled) toolManager.OnClick(false);
-            
-            if (!context.started) return;
-            
-            RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
-            if (!rayHit.collider) return;
-            
-            Debug.Log("Clicked collider with name: " + rayHit.collider.gameObject.name);
-
-            if (!toolManager) return;
-            
-            string tag = rayHit.collider.gameObject.tag;
-
-            switch (tag)
-            {
-                case "Prop":
-                    var prop = rayHit.collider.GetComponentInParent<Prop>();
-                    if (prop) toolManager.OnClickedProp(prop);
-                    break;
-                case "Tool":
-                    var tool = rayHit.collider.GetComponentInParent<Tool>();
-                    if (tool) toolManager.OnClickedTool(tool);
-                    break;
-            }
         }
 
         public void OnDrop(InputAction.CallbackContext context)
