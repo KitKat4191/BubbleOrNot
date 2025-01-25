@@ -22,9 +22,13 @@ namespace BubbleOrNot.Runtime
         protected override void OnCollisionEnter2D(Collision2D _) => Pop();
         public override void OnToolUsed(ToolType toolType) => Pop();
 
+        private bool _hasPopped;
         private void Pop()
         {
             if (_stopwatch.Elapsed.TotalSeconds < timeBeforeCanDie) return;
+            
+            if (_hasPopped) return;
+            _hasPopped = true;
             
             _rigidbody.isKinematic = true;
             _animator.SetTrigger("Pop");
