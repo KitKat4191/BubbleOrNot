@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Prop
   - Room
+  - Tool
   layers:
   - Default
   - TransparentFX
