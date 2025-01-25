@@ -45,12 +45,12 @@ namespace BubbleOrNot.Runtime
         }
 
         
-        private readonly Collider[] _colliderBuffer = new Collider[10];
+        private readonly Collider2D[] _colliderBuffer = new Collider2D[10];
         private bool TryGetProp(out Prop prop)
         {
             prop = null;
             
-            int count = Physics.OverlapSphereNonAlloc(transform.position, 0.1f, _colliderBuffer, LayerMask.GetMask("Props"));
+            int count = Physics2D.OverlapCircleNonAlloc(transform.position, 0.1f, _colliderBuffer, LayerMask.GetMask("Props"));
             if (count <= 0) return false;
             
             prop = _colliderBuffer[0].GetComponentInParent<Prop>();
