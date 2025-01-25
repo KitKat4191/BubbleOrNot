@@ -32,7 +32,10 @@ namespace BubbleOrNot.Runtime
         [SerializeField, HideInInspector, GetComponentsInChildren] private Prop[] props;
 
         
-        private int _currentPropIndex;
+        private int _currentPropIndex = -1;
+
+        
+        public Prop CurrentProp => props[_currentPropIndex];
         
 
         private void Awake()
@@ -50,9 +53,9 @@ namespace BubbleOrNot.Runtime
         {
             yield return new WaitForSeconds(waitTime);
 
+            SpawnProp();
             PlaySpawnSound();
             UpdatePropIcon();
-            SpawnProp();
         }
 
         private void PlaySpawnSound()
@@ -64,13 +67,6 @@ namespace BubbleOrNot.Runtime
 
         private void SpawnProp()
         {
-            Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
-            newProp.gameObject.SetActive(true);
-            
-            var rb = newProp.GetComponent<Rigidbody2D>();
-            rb.velocity = spawnVelocity;
-            rb.angularVelocity = Random.Range(minSpawnRotationSpeed, maxSpawnRotationSpeed);
-            
             _currentPropIndex++;
 
             if (_currentPropIndex >= props.Length)
@@ -79,6 +75,13 @@ namespace BubbleOrNot.Runtime
                 _currentPropIndex = 0;
                 props.Shuffle();
             }
+            
+            Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
+            newProp.gameObject.SetActive(true);
+            
+            var rb = newProp.GetComponent<Rigidbody2D>();
+            rb.velocity = spawnVelocity;
+            rb.angularVelocity = Random.Range(minSpawnRotationSpeed, maxSpawnRotationSpeed);
         }
 
         private void UpdatePropIcon()
