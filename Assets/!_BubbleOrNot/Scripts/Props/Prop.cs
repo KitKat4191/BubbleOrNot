@@ -24,12 +24,16 @@ namespace BubbleOrNot.Runtime
             switch (toolType)
             {
                 case ToolType.Alien:
+                    if (alienSounds) AudioManager.Instance.Play(alienSounds);
                     break;
                 case ToolType.Hammer:
+                    if (hammerSounds) AudioManager.Instance.Play(hammerSounds);
                     break;
                 case ToolType.Needle:
+                    if (needleSounds) AudioManager.Instance.Play(needleSounds);
                     break;
                 case ToolType.Taser:
+                    if (taserSounds) AudioManager.Instance.Play(taserSounds);
                     break;
                 default:
                     Debug.LogWarning($"Tool type {toolType} is not supported");
