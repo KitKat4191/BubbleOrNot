@@ -51,8 +51,8 @@ namespace BubbleOrNot.Runtime
             yield return new WaitForSeconds(waitTime);
 
             PlaySpawnSound();
-            SpawnProp();
             UpdatePropIcon();
+            SpawnProp();
         }
 
         private void PlaySpawnSound()
