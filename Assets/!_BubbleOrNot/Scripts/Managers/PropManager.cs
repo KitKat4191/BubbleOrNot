@@ -42,6 +42,11 @@ namespace BubbleOrNot.Runtime
         {
             props.Shuffle();
         }
+
+        private void Start()
+        {
+            SpawnNextProp();
+        }
         
         public void SpawnNextProp()
         {
