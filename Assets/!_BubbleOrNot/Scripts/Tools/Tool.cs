@@ -16,13 +16,31 @@ namespace BubbleOrNot.Runtime
         private Collider2D _collider;
         private Animator _animator;
 
+        private Prop _currentProp;
+        
+        
         private void Awake()
         {
             _spawnPosition = transform.position;
             _collider = GetComponent<Collider2D>();
             _animator = GetComponent<Animator>();
         }
-        
+
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (!TryGetProp(other, out _currentProp)) return;
+            if (_isUsing) _currentProp.OnToolUsed(toolType);
+        }
+
+        private void OnTriggerExit2D(Collider2D other)
+        {
+            if (!TryGetProp(other, out Prop prop)) return;
+            if (prop != _currentProp) return;
+            
+            _currentProp = null;
+        }
+
 
         public void OnEquipped()
         {
@@ -35,19 +53,22 @@ namespace BubbleOrNot.Runtime
             transform.position = _spawnPosition;
         }
 
+        private bool _isUsing;
         public void OnClick(bool pressed)
         {
-            _animator.SetBool(Using, pressed);
+            _isUsing = pressed;
+            
+            _animator.SetBool(Using, _isUsing);
             
             if (!pressed) return;
-            if (!TryGetProp(out Prop prop)) return;
             
-            prop.OnToolUsed(toolType);
+            if (_currentProp)
+                _currentProp.OnToolUsed(toolType);
         }
 
         
         private readonly Collider2D[] _colliderBuffer = new Collider2D[10];
-        private bool TryGetProp(out Prop prop)
+        private bool TryGetProp(Collider2D other, out Prop prop)
         {
             prop = null;
             
