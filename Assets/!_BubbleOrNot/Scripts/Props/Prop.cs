@@ -16,6 +16,7 @@ namespace BubbleOrNot.Runtime
     {
         [Header("Settings")]
         [SerializeField] protected bool isFlushable = true;
+        [SerializeField] protected Sprite displaySprite;
         
         [Header("Audio Settings")]
         [SerializeField] protected AudioBundle alienSounds;
@@ -43,6 +44,7 @@ namespace BubbleOrNot.Runtime
         }
 
         public bool IsFlushable => isFlushable;
+        public Sprite DisplaySprite => displaySprite;
         
         public virtual void OnToolUsed(ToolType toolType)
         {

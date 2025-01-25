@@ -13,6 +13,7 @@ namespace BubbleOrNot.Runtime
         [Header("References")]
         [SerializeField] private Transform propDispenser;
         [SerializeField] private Animator pipeAnimator;
+        [SerializeField] private SpriteRenderer currentPropIcon;
         
         [Space]
         [SerializeField] private float pipeAnimationDuration = 1f;
@@ -50,6 +51,7 @@ namespace BubbleOrNot.Runtime
             yield return new WaitForSeconds(waitTime);
 
             PlaySpawnSound();
+            UpdatePropIcon();
             SpawnProp();
         }
 
@@ -77,6 +79,11 @@ namespace BubbleOrNot.Runtime
                 _currentPropIndex = 0;
                 props.Shuffle();
             }
+        }
+
+        private void UpdatePropIcon()
+        {
+            currentPropIcon.sprite = props[_currentPropIndex].DisplaySprite;
         }
     }
 }
