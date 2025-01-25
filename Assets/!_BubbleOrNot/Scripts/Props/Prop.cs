@@ -18,6 +18,14 @@ namespace BubbleOrNot.Runtime
         [SerializeField] private AudioBundle hammerSounds;
         [SerializeField] private AudioBundle needleSounds;
         [SerializeField] private AudioBundle taserSounds;
+        [SerializeField] private AudioBundle collisionSounds;
+
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
+        }
+
 
         public virtual void OnToolUsed(ToolType toolType)
         {
