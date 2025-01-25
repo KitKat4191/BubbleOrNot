@@ -12,12 +12,19 @@ namespace BubbleOrNot.Runtime
         protected override void OnCollisionEnter2D(Collision2D other)
         {
             base.OnCollisionEnter2D(other);
-            Destroy(gameObject, timeBeforeDestroy);
+            Pop();
         }
 
         public override void OnToolUsed(ToolType toolType)
         {
             base.OnToolUsed(toolType);
+            Pop();
+        }
+
+        private void Pop()
+        {
+            _rigidbody.isKinematic = true;
+            _animator.SetTrigger("Pop");
             Destroy(gameObject, timeBeforeDestroy);
         }
     }
