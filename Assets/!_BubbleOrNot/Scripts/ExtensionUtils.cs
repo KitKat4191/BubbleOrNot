@@ -1,4 +1,5 @@
 
+using UnityEngine;
 using System.Collections.Generic;
 
 namespace BubbleOrNot.Utils
@@ -16,5 +17,7 @@ namespace BubbleOrNot.Utils
                 (list[k], list[n]) = (list[n], list[k]);
             }  
         }
+
+        public static bool IsInMask(this int layer, LayerMask mask) => (layer & mask) != 0;
     }
 }
