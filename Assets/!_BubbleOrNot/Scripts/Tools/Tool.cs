@@ -37,6 +37,24 @@ namespace BubbleOrNot.Runtime
         public void OnClick(bool pressed)
         {
             animator.SetBool(Using, pressed);
+            
+            if (!pressed) return;
+            if (!TryGetProp(out Prop prop)) return;
+            
+            prop.OnToolUsed(toolType);
+        }
+
+        
+        private readonly Collider[] _colliderBuffer = new Collider[10];
+        private bool TryGetProp(out Prop prop)
+        {
+            prop = null;
+            
+            int count = Physics.OverlapSphereNonAlloc(transform.position, 0.1f, _colliderBuffer, LayerMask.GetMask("Props"));
+            if (count <= 0) return false;
+            
+            prop = _colliderBuffer[0].GetComponentInParent<Prop>();
+            return prop;
         }
     }
 }
