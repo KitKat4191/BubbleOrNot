@@ -43,6 +43,7 @@ namespace BubbleOrNot.Runtime
             yield return new WaitForSeconds(waitTime);
             
             Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
+            newProp.gameObject.SetActive(true);
             
             var rb = newProp.GetComponent<Rigidbody2D>();
             rb.velocity = spawnVelocity;
