@@ -2,7 +2,7 @@
 using UnityEngine;
 using BubbleOrNot.Utils;
 
-namespace BubbleOrNot.Runtime
+namespace BubbleOrNot.Runtime.Audio
 {
     [CreateAssetMenu(menuName = "BubbleOrNot/AudioBundle", fileName = "AudioBundleName")]
     public class AudioBundle : ScriptableObject
