@@ -14,12 +14,12 @@ namespace BubbleOrNot.Runtime
         
         
         private Vector3 _spawnPosition;
-        private Collider _collider;
+        private Collider2D _collider;
 
         private void Awake()
         {
             _spawnPosition = transform.position;
-            _collider = GetComponentInChildren<Collider>();
+            _collider = GetComponentInChildren<Collider2D>();
         }
         
 
@@ -50,7 +50,7 @@ namespace BubbleOrNot.Runtime
         {
             prop = null;
             
-            int count = Physics2D.OverlapCircleNonAlloc(transform.position, 0.1f, _colliderBuffer, LayerMask.GetMask("Props"));
+            int count = Physics2D.OverlapCircleNonAlloc(transform.position, 0.1f, _colliderBuffer, LayerMask.GetMask("Prop"));
             if (count <= 0) return false;
             
             prop = _colliderBuffer[0].GetComponentInParent<Prop>();
