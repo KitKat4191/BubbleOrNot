@@ -17,6 +17,15 @@ namespace BubbleOrNot.Runtime.Audio
             }
             
             Instance = this;
+            
+            _audioSource = GetComponent<AudioSource>();
+        }
+        
+        private AudioSource _audioSource;
+
+        public void PlayClip(AudioClip clip)
+        {
+            _audioSource.PlayOneShot(clip);
         }
     }
 }
