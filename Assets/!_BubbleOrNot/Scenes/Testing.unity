@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propDispenser: {fileID: 761373107}
   pipeAnimator: {fileID: 1486910675}
+  currentPropIcon: {fileID: 0}
   pipeAnimationDuration: 0.9
   audioSource: {fileID: 2470381}
   minPitchVariation: 0.05
@@ -353,6 +354,7 @@ Transform:
   - {fileID: 619394802}
   - {fileID: 2830230622128120928}
   - {fileID: 2470379}
+  - {fileID: 1048075050}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &204341906 stripped
@@ -696,6 +698,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2470379}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1048075049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048075050}
+  - component: {fileID: 1048075051}
+  m_Layer: 0
+  m_Name: Audio Reverb Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1048075050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048075049}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.24512158, y: 0.1353416, z: -0.02957662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 180548928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!167 &1048075051
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048075049}
+  m_Enabled: 1
+  m_MinDistance: 20
+  m_MaxDistance: 20
+  m_ReverbPreset: 11
+  m_Room: -1000
+  m_RoomHF: -1000
+  m_DecayTime: 10.05
+  m_DecayHFRatio: 0.23
+  m_Reflections: -602
+  m_ReflectionsDelay: 0.02
+  m_Reverb: 198
+  m_ReverbDelay: 0.03
+  m_HFReference: 5000
+  m_Diffusion: 100
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!4 &1260071949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2063328867171982318, guid: a1e8e40cc38bb334ab893747cfb8cc4e, type: 3}
