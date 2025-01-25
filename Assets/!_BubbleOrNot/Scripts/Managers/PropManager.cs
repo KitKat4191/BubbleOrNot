@@ -1,0 +1,40 @@
+
+using UnityEngine;
+using VRRefAssist;
+
+using BubbleOrNot.Utils;
+
+namespace BubbleOrNot.Runtime
+{
+    [AddComponentMenu("")]
+    public class PropManager : MonoBehaviour
+    {
+        [SerializeField] private Transform propDispenser;
+        
+        
+        [SerializeField, HideInInspector, GetComponentsInChildren] private Prop[] props;
+
+        
+        private int _currentPropIndex;
+        
+
+        private void Awake()
+        {
+            props.Shuffle();
+        }
+        
+        
+        public void SpawnNextProp()
+        {
+            Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
+            _currentPropIndex++;
+
+            if (_currentPropIndex >= props.Length)
+            {
+                Debug.Log("No more props!");
+                _currentPropIndex = 0;
+                props.Shuffle();
+            }
+        }
+    }
+}
