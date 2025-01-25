@@ -160,6 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390949230793798706}
+  - component: {fileID: 8203035417015321363}
   - component: {fileID: 1265349599247134828}
   m_Layer: 0
   m_Name: Prop
@@ -185,6 +186,22 @@ Transform:
   - {fileID: 6656226134767366846}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8203035417015321363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4988810015433880929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524ca12e47b2a3a429b374f3ca00dafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienSounds: {fileID: 0}
+  hammerSounds: {fileID: 0}
+  needleSounds: {fileID: 0}
+  taserSounds: {fileID: 0}
 --- !u!50 &1265349599247134828
 Rigidbody2D:
   serializedVersion: 4
