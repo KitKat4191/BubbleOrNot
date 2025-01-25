@@ -23,7 +23,12 @@ namespace BubbleOrNot.Runtime.Audio
         
         private AudioSource _audioSource;
 
-        public void PlayClip(AudioClip clip)
+        public void Play(AudioBundle bundle)
+        {
+            _audioSource.PlayOneShot(bundle.GetClip);
+        }
+        
+        public void Play(AudioClip clip)
         {
             _audioSource.PlayOneShot(clip);
         }
