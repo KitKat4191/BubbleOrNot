@@ -13,6 +13,7 @@ namespace BubbleOrNot.Runtime
         
         public override void OnClick(bool pressed)
         {
+            Debug.Log("OnClick : " + pressed, this);
             animator.SetBool("Pressed", pressed);
             if (!pressed) onClick.Invoke();
         }
