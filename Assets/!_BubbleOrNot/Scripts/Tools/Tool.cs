@@ -49,6 +49,7 @@ namespace BubbleOrNot.Runtime
 
         public void OnUnequipped()
         {
+            OnClick(false);
             _collider.enabled = true;
             transform.position = _spawnPosition;
         }
