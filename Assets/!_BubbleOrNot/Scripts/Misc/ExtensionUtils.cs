@@ -18,6 +18,6 @@ namespace BubbleOrNot.Utils
             }  
         }
 
-        public static bool IsInMask(this int layer, LayerMask mask) => (layer & mask) != 0;
+        public static bool IsInMask(this int layer, LayerMask mask) => (layer & mask.value) != 0;
     }
 }
