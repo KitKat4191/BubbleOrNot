@@ -173,9 +173,9 @@ MonoBehaviour:
   propDispenser: {fileID: 761373107}
   pipeAnimator: {fileID: 1486910675}
   pipeAnimationDuration: 0.9
-  audioSource: {fileID: 2470381}
-  minPitchVariation: 0.05
-  maxPitchVariation: 0.05
+  audioSource: {fileID: 0}
+  minPitchVariation: 0
+  maxPitchVariation: 0
   spawnVelocity: {x: 2, y: 0}
   minSpawnRotationSpeed: -1
   maxSpawnRotationSpeed: 1
