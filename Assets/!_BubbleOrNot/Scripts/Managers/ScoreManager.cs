@@ -4,7 +4,7 @@ using UnityEngine;
 namespace BubbleOrNot.Runtime
 {
     [AddComponentMenu("")]
-    public class AnswerManager : MonoBehaviour
+    public class ScoreManager : MonoBehaviour
     {
         [SerializeField] private PropManager propManager;
 
