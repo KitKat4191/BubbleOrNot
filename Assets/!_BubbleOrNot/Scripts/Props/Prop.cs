@@ -11,11 +11,8 @@ namespace BubbleOrNot.Runtime
         Taser,
     }
     
-    public class Prop : MonoBehaviour
+    public abstract class Prop : MonoBehaviour
     {
-        public void OnToolUsed(ToolType toolType)
-        {
-            
-        }
+        public abstract void OnToolUsed(ToolType toolType);
     }
 }
