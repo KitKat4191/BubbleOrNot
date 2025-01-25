@@ -6,6 +6,7 @@ namespace BubbleOrNot.Runtime
     [AddComponentMenu("BubbleOrNot/Props/SoapBubble")]
     public class SoapBubble : Prop
     {
+        [Header("Soap Bubble Settings")]
         [SerializeField] private float timeBeforeDestroy;
         
         protected override void OnCollisionEnter2D(Collision2D other)
