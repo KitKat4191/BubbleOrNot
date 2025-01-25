@@ -34,7 +34,7 @@ namespace BubbleOrNot.Runtime
         }
         
         
-        protected virtual void OnCollisionEnter2D(Collision2D other)
+        protected virtual void OnCollisionEnter2D(Collision2D _)
         {
             if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
         }
@@ -54,6 +54,7 @@ namespace BubbleOrNot.Runtime
                     break;
                 case ToolType.Taser:
                     if (taserSounds) AudioManager.Instance.Play(taserSounds);
+                    _animator.SetTrigger("Tazed");
                     break;
                 default:
                     Debug.LogWarning($"Tool type {toolType} is not supported");
