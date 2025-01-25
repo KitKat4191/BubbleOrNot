@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: toolType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4920815891751291204, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: repeatUseWhileHeld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6316122361408539865, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       propertyPath: m_Sprite
       value: 
