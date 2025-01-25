@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using BubbleOrNot.Runtime.Audio;
+using Random = UnityEngine.Random;
 
 namespace BubbleOrNot.Runtime
 {
@@ -14,6 +15,8 @@ namespace BubbleOrNot.Runtime
     
     public class Prop : MonoBehaviour
     {
+        [SerializeField] protected bool isBubble;
+        
         [Header("Settings")]
         [SerializeField] protected bool isFlushable = true;
         [SerializeField] protected Sprite displaySprite;
@@ -45,6 +48,7 @@ namespace BubbleOrNot.Runtime
 
         public bool IsFlushable => isFlushable;
         public Sprite DisplaySprite => displaySprite;
+        public bool IsBubble => Random.Range(int.MinValue, int.MaxValue) > 0;
         
         public virtual void OnToolUsed(ToolType toolType)
         {
