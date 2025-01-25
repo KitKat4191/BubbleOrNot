@@ -15,11 +15,11 @@ namespace BubbleOrNot.Runtime
     public class Prop : MonoBehaviour
     {
         [Header("Audio Settings")]
-        [SerializeField] private AudioBundle alienSounds;
-        [SerializeField] private AudioBundle hammerSounds;
-        [SerializeField] private AudioBundle needleSounds;
-        [SerializeField] private AudioBundle taserSounds;
-        [SerializeField] private AudioBundle collisionSounds;
+        [SerializeField] protected AudioBundle alienSounds;
+        [SerializeField] protected AudioBundle hammerSounds;
+        [SerializeField] protected AudioBundle needleSounds;
+        [SerializeField] protected AudioBundle taserSounds;
+        [SerializeField] protected AudioBundle collisionSounds;
 
 
         
