@@ -1,5 +1,8 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem;
+
+using BubbleOrNot.Utils;
 
 namespace BubbleOrNot.Runtime
 {
@@ -7,27 +10,37 @@ namespace BubbleOrNot.Runtime
     public class ToolManager : MonoBehaviour
     {
         [SerializeField] private Transform mouseFollower;
+        [SerializeField] private LayerMask toolClickLayerMask;
+        
         
         private Tool _equippedTool;
+        private Camera _mainCamera;
 
         
-        public void OnClickedTool(Tool newTool)
+        private void Awake()
         {
-            if (!newTool) return;
-            EquipTool(newTool);
+            _mainCamera = Camera.main;
         }
 
-        public void OnClickedProp(Prop prop)
-        {
-            if (!prop) return;
-            if (!_equippedTool) return;
-            
-            _equippedTool.UseOn(prop);
-        }
+
+        #region INPUT
 
         public void OnClick(bool pressed)
         {
+            if (_equippedTool) _equippedTool.OnClick(pressed);
             
+            if (!pressed) return;
+            
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
+            Collider2D hitCollider = rayHit.collider;
+            if (!hitCollider) return;
+            
+            Debug.Log("Clicked collider with name: " + hitCollider.name);
+            
+            if (!hitCollider.gameObject.layer.IsInMask(toolClickLayerMask)) return;
+            
+            var tool = hitCollider.GetComponentInParent<Tool>();
+            if (tool) EquipTool(tool);
         }
 
         public void OnDrop(bool pressed)
@@ -36,6 +49,11 @@ namespace BubbleOrNot.Runtime
             
             DeEquip();
         }
+        
+        #endregion // INPUT
+
+
+        #region INTERNAL
         
         private void EquipTool(Tool tool)
         {
@@ -56,5 +74,7 @@ namespace BubbleOrNot.Runtime
             _equippedTool.Respawn();
             _equippedTool = null;
         }
+        
+        #endregion // INTERNAL
     }
 }
