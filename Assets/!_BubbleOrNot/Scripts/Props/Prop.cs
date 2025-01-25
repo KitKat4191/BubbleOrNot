@@ -14,10 +14,19 @@ namespace BubbleOrNot.Runtime
     
     public class Prop : MonoBehaviour
     {
+        [Header("Audio Settings")]
         [SerializeField] private AudioBundle alienSounds;
         [SerializeField] private AudioBundle hammerSounds;
         [SerializeField] private AudioBundle needleSounds;
         [SerializeField] private AudioBundle taserSounds;
+        [SerializeField] private AudioBundle collisionSounds;
+
+
+        protected virtual void OnCollisionEnter2D(Collision2D other)
+        {
+            if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
+        }
+
 
         public virtual void OnToolUsed(ToolType toolType)
         {

@@ -80,8 +80,34 @@ PrefabInstance:
       propertyPath: needleSounds
       value: 
       objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1635126611095737109, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 9108729568078476428}
   m_SourcePrefab: {fileID: 100100000, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+--- !u!1 &1776790361367592145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1635126611095737109, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+  m_PrefabInstance: {fileID: 1015930697292017604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9108729568078476428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776790361367592145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f2eec50fb548d943a3c9ab1ba40d02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+  hammerSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+  needleSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+  taserSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
+  collisionSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
