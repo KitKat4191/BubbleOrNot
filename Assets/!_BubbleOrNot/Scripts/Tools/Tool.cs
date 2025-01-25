@@ -19,7 +19,7 @@ namespace BubbleOrNot.Runtime
         private void Awake()
         {
             _spawnPosition = transform.position;
-            _collider = GetComponentInChildren<Collider2D>();
+            _collider = GetComponent<Collider2D>();
             _animator = GetComponent<Animator>();
         }
         
