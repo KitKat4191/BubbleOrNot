@@ -126,5 +126,5 @@ MonoBehaviour:
   needleSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
   taserSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
   collisionSounds: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
-  timeBeforeCanDie: 1
+  timeBeforeCanDie: 0.2
   timeBeforeDestroy: 0.2
