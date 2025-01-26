@@ -96,5 +96,14 @@ namespace BubbleOrNot.Runtime
                     break;
             }
         }
+
+        public void OnToolStopUse()
+        {
+            _animator.SetBool(Zorbed, false);
+            _animator.SetBool(Smacked, false);
+            _animator.SetBool(Poked, false);
+            _animator.SetBool(Tazed, false);
+            _animator.SetBool(Umbrellaed, false);
+        }
     }
 }
