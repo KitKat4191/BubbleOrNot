@@ -69,6 +69,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 887bed2ca334f0f4fb9d5cd1b614467e, type: 2}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: alienSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 53eca6e5238f49747ae91792a26ba7de, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: displaySprite
       value: 
       objectReference: {fileID: -117901273, guid: 667aab1cd3077534a83618202c8bff51, type: 3}
