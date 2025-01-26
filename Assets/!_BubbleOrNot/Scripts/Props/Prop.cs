@@ -35,6 +35,7 @@ namespace BubbleOrNot.Runtime
         [SerializeField] protected AudioBundle hammerSounds;
         [SerializeField] protected AudioBundle needleSounds;
         [SerializeField] protected AudioBundle taserSounds;
+        [SerializeField] protected AudioBundle animationEventSounds;
         
         [Space]
         [SerializeField] protected AudioBundle lightCollisionSounds;
@@ -121,7 +122,43 @@ namespace BubbleOrNot.Runtime
             _animator.SetBool(Umbrellaed, false);
         }
 
+        #region ANIMATOR EVENT API
+
         [PublicAPI] // Called by animator event
         public void DestroyProp() => Destroy(gameObject, 0.1f);
+        
+        // AUDIO
+
+        [PublicAPI] // Called by animator event
+        public void PlaySoundAlien()
+        {
+            if (alienSounds) AudioManager.Instance.Play(alienSounds);
+        }
+        
+        [PublicAPI] // Called by animator event
+        public void PlaySoundHammer()
+        {
+            if (hammerSounds) AudioManager.Instance.Play(hammerSounds);
+        }
+        
+        [PublicAPI] // Called by animator event
+        public void PlaySoundNeedle()
+        {
+            if (needleSounds) AudioManager.Instance.Play(needleSounds);
+        }
+        
+        [PublicAPI] // Called by animator event
+        public void PlaySoundTaser()
+        {
+            if (taserSounds) AudioManager.Instance.Play(taserSounds);
+        }
+        
+        [PublicAPI] // Called by animator event
+        public void PlaySoundSpecial()
+        {
+            if (animationEventSounds) AudioManager.Instance.Play(animationEventSounds);
+        }
+        
+        #endregion // ANIMATOR EVENT API
     }
 }
