@@ -188,6 +188,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propManager: {fileID: 2470380}
+  scoreText: {fileID: 0}
+  loseScreen: {fileID: 1335825870}
+  winScreen: {fileID: 1407661443}
 --- !u!1 &111260417
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +974,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f02a96f8435fde4cbcd8520e2f7d1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1335825870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2088712617852637971, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+  m_PrefabInstance: {fileID: 5964282483243976981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407661443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1723385729871040887, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+  m_PrefabInstance: {fileID: 5964282483243976981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1486910675 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6629567801268976391, guid: b15250049c5290841aa4082cfa43db21, type: 3}
