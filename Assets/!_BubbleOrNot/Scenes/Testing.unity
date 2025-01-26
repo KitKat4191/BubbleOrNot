@@ -472,14 +472,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3987899870673082635, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 600c3151c0bf5424f904f42719167a8c, type: 2}
     - target: {fileID: 4042507312151973007, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 435227676, guid: efd2067a2c1bd024eaa547a077a1255f, type: 3}
+    - target: {fileID: 6544919433063583052, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1923455435, guid: efd2067a2c1bd024eaa547a077a1255f, type: 3}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1103,38 +1103,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3987899870673082635, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 399b7930777c2e5438ba1e2ef4e7ae1e, type: 2}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 101272575}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: IsBubble
-      objectReference: {fileID: 0}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BubbleOrNot.Runtime.ScoreManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7736095289846392514, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: m_Name
       value: IsBubbleButton
@@ -1702,6 +1670,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 101634544, guid: 9faa7be70f382164ca2b14028e7548ab, type: 3}
+    - target: {fileID: 6544919433063583052, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -370067605, guid: 9faa7be70f382164ca2b14028e7548ab, type: 3}
+    - target: {fileID: 6544919433063583052, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7320023247711877253, guid: 1e64f47dfd0257e4c8374a3ea109cd02, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
