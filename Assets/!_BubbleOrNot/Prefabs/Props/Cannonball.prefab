@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1635126611095737109, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Name
-      value: Cannonball Variant
+      value: Cannonball
       objectReference: {fileID: 0}
     - target: {fileID: 4893523895271465165, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Sprite
@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: isFlushable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: displaySprite
+      value: 
+      objectReference: {fileID: -280463378, guid: 0f08248b8a902a04287763a767a44ca4, type: 3}
     - target: {fileID: 6391408311321059890, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Radius
       value: 0.26
