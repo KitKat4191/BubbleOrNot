@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 97080570e189d0944895eb81ec689691, type: 3}
+  volumes: []
+  masterVolume: 1
   randomizePitch: 0
   minPitchVariation: 0
   maxPitchVariation: 0
