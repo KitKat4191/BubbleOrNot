@@ -62,8 +62,16 @@ PrefabInstance:
       objectReference: {fileID: -117901273, guid: 667aab1cd3077534a83618202c8bff51, type: 3}
     - target: {fileID: 4893523895271465165, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5505522367525964520, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 887bed2ca334f0f4fb9d5cd1b614467e, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: displaySprite
+      value: 
+      objectReference: {fileID: -117901273, guid: 667aab1cd3077534a83618202c8bff51, type: 3}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: collisionSounds
       value: 
