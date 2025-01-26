@@ -36,6 +36,7 @@ namespace BubbleOrNot.Runtime
 
         
         public Prop CurrentProp => props[_currentPropIndex];
+        public int PropCount => props.Length;
         
 
         private void Awake()
