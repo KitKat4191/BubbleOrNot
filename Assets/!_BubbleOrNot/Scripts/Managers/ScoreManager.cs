@@ -14,6 +14,7 @@ namespace BubbleOrNot.Runtime
         [SerializeField] private GameObject gameOverScreen;
         [SerializeField] private GameObject loseScreen;
         [SerializeField] private GameObject winScreen;
+        [SerializeField] private GameObject[] objectsToDisableOnGameOver;
 
 
         private int _answersSubmitted;
@@ -60,6 +61,9 @@ namespace BubbleOrNot.Runtime
         private void OnAllAnswersSubmitted()
         {
             gameOverScreen.SetActive(true);
+
+            foreach (GameObject o in objectsToDisableOnGameOver)
+                o.SetActive(false);
             
             bool won = _score == _maxScore;
             
