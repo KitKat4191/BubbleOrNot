@@ -34,7 +34,7 @@ namespace BubbleOrNot.Runtime
             _animator.SetTrigger("Pop");
             Destroy(gameObject, timeBeforeDestroy);
             
-            if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
+            if (hammerSounds) AudioManager.Instance.Play(hammerSounds);
         }
     }
 }
