@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using JetBrains.Annotations;
 using BubbleOrNot.Runtime.Audio;
 using Random = UnityEngine.Random;
 
@@ -34,8 +35,16 @@ namespace BubbleOrNot.Runtime
         [SerializeField] protected AudioBundle hammerSounds;
         [SerializeField] protected AudioBundle needleSounds;
         [SerializeField] protected AudioBundle taserSounds;
-        [SerializeField] protected AudioBundle collisionSounds;
-
+        
+        [Space]
+        [SerializeField] protected AudioBundle lightCollisionSounds;
+        [SerializeField] protected AudioBundle mediumCollisionSounds;
+        [SerializeField] protected AudioBundle hardCollisionSounds;
+        
+        [Space]
+        [SerializeField] protected float lightCollisionThreshold;
+        [SerializeField] protected float mediumCollisionThreshold;
+        [SerializeField] protected float hardCollisionThreshold;
 
         
         protected Animator _animator;
@@ -49,9 +58,15 @@ namespace BubbleOrNot.Runtime
         }
         
         
-        protected virtual void OnCollisionEnter2D(Collision2D _)
+        protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collisionSounds) AudioManager.Instance.Play(collisionSounds);
+            float speed = collision.relativeVelocity.magnitude;
+            if (speed > hardCollisionThreshold)
+                if (hardCollisionSounds) AudioManager.Instance.Play(hardCollisionSounds);
+            if (speed > mediumCollisionThreshold)
+                if (mediumCollisionSounds) AudioManager.Instance.Play(mediumCollisionSounds);
+            if (speed > lightCollisionThreshold)
+                if (lightCollisionSounds) AudioManager.Instance.Play(lightCollisionSounds);
         }
 
         public bool IsFlushable => isFlushable;
@@ -104,6 +119,12 @@ namespace BubbleOrNot.Runtime
             _animator.SetBool(Poked, false);
             _animator.SetBool(Tazed, false);
             _animator.SetBool(Umbrellaed, false);
+        }
+
+        [PublicAPI]
+        public void DestroyProp()
+        {
+            
         }
     }
 }
