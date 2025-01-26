@@ -48,10 +48,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2415096124767890620, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 080c89f952e5f8f4ca3360c6aa6b4997, type: 2}
+    - target: {fileID: 3070207247906523994, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070207247906523994, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4920815891751291204, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       propertyPath: toolType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4920815891751291204, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: useAudio
+      value: 
+      objectReference: {fileID: 11400000, guid: 092ff1d43b500b34c9233292dec14c97, type: 2}
     - target: {fileID: 6316122361408539865, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -67,5 +83,48 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8095760538660122328, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7806242205914426069}
   m_SourcePrefab: {fileID: 100100000, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+--- !u!1 &3557414971271022500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8095760538660122328, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+  m_PrefabInstance: {fileID: 4685873643852540284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &7806242205914426069
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557414971271022500}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1, y: -0.2}
+  serializedVersion: 2
+  m_Radius: 0.1
