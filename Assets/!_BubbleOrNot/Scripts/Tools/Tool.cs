@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using BubbleOrNot.Runtime.Audio;
 
 namespace BubbleOrNot.Runtime
 {
@@ -12,6 +13,7 @@ namespace BubbleOrNot.Runtime
         [SerializeField] private ToolType toolType;
         [SerializeField] private bool repeatUseWhileHeld;
         [SerializeField] private float repeatInterval = 0.5f;
+        [SerializeField] private AudioBundle useAudio;
         
         
         private Vector3 _spawnPosition;
@@ -32,7 +34,7 @@ namespace BubbleOrNot.Runtime
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (!TryGetProp(other, out _currentProp)) return;
-            if (_isUsing && _currentProp) _currentProp.OnToolUsed(toolType);
+            if (_isUsing) OnToolUsed();
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -52,7 +54,8 @@ namespace BubbleOrNot.Runtime
             _elapsedTime += Time.deltaTime;
             if (_elapsedTime < repeatInterval) return;
             _elapsedTime = 0;
-            if (_currentProp) _currentProp.OnToolUsed(toolType);
+            
+            OnToolUsed();
         }
 
 
@@ -77,14 +80,19 @@ namespace BubbleOrNot.Runtime
             
             if (!pressed) return;
             
-            if (_currentProp)
-                _currentProp.OnToolUsed(toolType);
+            OnToolUsed();
         }
         
         private static bool TryGetProp(Collider2D other, out Prop prop)
         {
             prop = other.GetComponentInParent<Prop>();
             return prop;
+        }
+
+        private void OnToolUsed()
+        {
+            if (useAudio) AudioManager.Instance.Play(useAudio);
+            if (_currentProp) _currentProp.OnToolUsed(toolType);
         }
     }
 }
