@@ -15,7 +15,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: 112a807c96f61f043af82d48e608788c, type: 3}
   volumes: []
-  masterVolume: 1
+  masterVolume: 0.5
   randomizePitch: 0
   minPitchVariation: 0
   maxPitchVariation: 0
