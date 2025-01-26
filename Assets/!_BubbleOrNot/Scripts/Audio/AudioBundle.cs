@@ -14,7 +14,7 @@ namespace BubbleOrNot.Runtime.Audio
         
         [Space]
         [Range(0, 1)]
-        [SerializeField] private float masterVolume;
+        [SerializeField] private float masterVolume = 1;
         
         [Space]
         [SerializeField] private bool randomizePitch;
