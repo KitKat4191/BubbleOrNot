@@ -12,6 +12,7 @@ namespace BubbleOrNot.Runtime
         [PublicAPI]
         public void LoadScene(string nameOfSceneToLoad)
         {
+            Debug.Log("Loading scene: " + nameOfSceneToLoad);
             SceneManager.LoadScene(nameOfSceneToLoad);
         }
     }
