@@ -11,6 +11,7 @@ namespace BubbleOrNot.Runtime
         
         [Space]
         [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] private GameObject gameOverScreen;
         [SerializeField] private GameObject loseScreen;
         [SerializeField] private GameObject winScreen;
 
@@ -56,6 +57,8 @@ namespace BubbleOrNot.Runtime
 
         private void OnAllAnswersSubmitted()
         {
+            gameOverScreen.SetActive(true);
+            
             bool won = _score == _maxScore;
             
             winScreen.SetActive(won);
