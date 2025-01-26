@@ -121,10 +121,7 @@ namespace BubbleOrNot.Runtime
             _animator.SetBool(Umbrellaed, false);
         }
 
-        [PublicAPI]
-        public void DestroyProp()
-        {
-            
-        }
+        [PublicAPI] // Called by animator event
+        public void DestroyProp() => Destroy(gameObject, 0.1f);
     }
 }
