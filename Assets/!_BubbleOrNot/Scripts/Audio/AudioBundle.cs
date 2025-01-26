@@ -63,10 +63,12 @@ namespace BubbleOrNot.Runtime.Audio
 
         public float GetVolumeForClip(AudioClip clip)
         {
-            if (!clip) return 0;
+            if (!clip) return 1;
             
             int index = System.Array.IndexOf(audioClips, clip);
-            if (index < 0) return 0;
+            if (index < 0) return 1;
+
+            if (index >= volumes.Length) return 1;
 
             return volumes[index] * masterVolume;
         }
