@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daaf5530b4fefab40b58c85dbff630fa, type: 3}
   m_Name: Explosions
   m_EditorClassIdentifier: 
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: af6ed7bf8a3d48144914cff092336435, type: 3}
   volumes: []
-  masterVolume: 0
+  masterVolume: 1
   randomizePitch: 0
   minPitchVariation: 0
   maxPitchVariation: 0
