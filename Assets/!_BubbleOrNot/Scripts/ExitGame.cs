@@ -1,12 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class ExitGame : MonoBehaviour
+using UnityEngine;
+using JetBrains.Annotations;
+
+namespace BubbleOrNot.Runtime
 {
-    public void QuitGame()
+    [AddComponentMenu("")]
+    public class ExitGame : MonoBehaviour
     {
-        Application.Quit();
-        Debug.Log("Bye Bye!");
+        [PublicAPI]
+        public void QuitGame()
+        {
+            Debug.Log("Bye Bye!");
+            Application.Quit();
+        }
     }
 }
