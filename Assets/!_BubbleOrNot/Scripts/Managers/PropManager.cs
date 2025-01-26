@@ -10,6 +10,8 @@ namespace BubbleOrNot.Runtime
     [AddComponentMenu("")]
     public class PropManager : MonoBehaviour
     {
+        [SerializeField] private bool doInfiniteMode;
+        
         [Header("References")]
         [SerializeField] private Transform propDispenser;
         [SerializeField] private Animator pipeAnimator;
@@ -36,7 +38,7 @@ namespace BubbleOrNot.Runtime
 
         
         public Prop CurrentProp => props[_currentPropIndex];
-        public int PropCount => props.Length;
+        public int PropCount => doInfiniteMode ? int.MaxValue : props.Length;
         
 
         private void Awake()
@@ -79,7 +81,12 @@ namespace BubbleOrNot.Runtime
             if (_currentPropIndex >= props.Length)
             {
                 Debug.Log("No more props!");
-                return false;
+                if (doInfiniteMode)
+                {
+                    _currentPropIndex = 0;
+                    props.Shuffle();
+                }
+                else return false;
             }
             
             Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
