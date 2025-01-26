@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8095760538660122328, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       propertyPath: m_Name
-      value: Hammer Variant
+      value: Hammer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -127,4 +127,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.1, y: -0.2}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.05

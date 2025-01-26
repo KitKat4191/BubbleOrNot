@@ -301,9 +301,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.2}
+  m_Offset: {x: 0, y: 0.25}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.05
 --- !u!4 &8843689816835621730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 523356339921375415, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}

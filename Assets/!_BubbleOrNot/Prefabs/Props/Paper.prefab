@@ -457,6 +457,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1777662152, guid: d7e4ff6b96c593443996d6d18b7b0538, type: 3}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: hardCollisionSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 1da3b58b86a8c5247a78ab296d78a21b, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: animationEventSounds
       value: 
       objectReference: {fileID: 11400000, guid: a332838780b56c343a3a716f060b85dd, type: 2}
