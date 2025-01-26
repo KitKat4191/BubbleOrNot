@@ -65,7 +65,8 @@ PrefabInstance:
       value: AlienTool Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4397909425046033523, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
