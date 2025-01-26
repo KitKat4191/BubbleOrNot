@@ -59,7 +59,8 @@ namespace BubbleOrNot.Runtime
         {
             yield return new WaitForSeconds(waitTime);
 
-            SpawnProp();
+            if (!TrySpawnProp()) yield break;
+            
             PlaySpawnSound();
             UpdatePropIcon();
         }
@@ -71,14 +72,14 @@ namespace BubbleOrNot.Runtime
             audioSource.Play();
         }
 
-        private void SpawnProp()
+        private bool TrySpawnProp()
         {
             _currentPropIndex++;
 
             if (_currentPropIndex >= props.Length)
             {
                 Debug.Log("No more props!");
-                return;
+                return false;
             }
             
             Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
@@ -87,6 +88,8 @@ namespace BubbleOrNot.Runtime
             var rb = newProp.GetComponent<Rigidbody2D>();
             rb.velocity = spawnVelocity;
             rb.angularVelocity = Random.Range(minSpawnRotationSpeed, maxSpawnRotationSpeed);
+            
+            return true;
         }
 
         private void UpdatePropIcon()
