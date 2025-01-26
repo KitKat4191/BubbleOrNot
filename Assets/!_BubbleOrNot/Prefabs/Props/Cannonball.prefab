@@ -85,11 +85,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: needleSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d8092bbcb75bc04da9c962d05365798, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: displaySprite
       value: 
       objectReference: {fileID: -280463378, guid: 0f08248b8a902a04287763a767a44ca4, type: 3}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: collisionSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 55946764b19c0a0479a63d257ddac0b6, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: hardCollisionSounds
       value: 
       objectReference: {fileID: 11400000, guid: 55946764b19c0a0479a63d257ddac0b6, type: 2}
     - target: {fileID: 6391408311321059890, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
