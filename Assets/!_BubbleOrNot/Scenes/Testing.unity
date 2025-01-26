@@ -988,6 +988,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1486910675}
     - target: {fileID: 1326518802508602345, guid: 4d8e0908d73f5064583cf426dae47a99, type: 3}
+      propertyPath: doInfiniteMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326518802508602345, guid: 4d8e0908d73f5064583cf426dae47a99, type: 3}
       propertyPath: props.Array.size
       value: 6
       objectReference: {fileID: 0}
