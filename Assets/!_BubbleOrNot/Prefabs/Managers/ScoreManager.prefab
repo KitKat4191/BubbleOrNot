@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   propManager: {fileID: 0}
   scoreText: {fileID: 0}
+  gameOverScreen: {fileID: 6568082557206736378}
   loseScreen: {fileID: 4613943934830851344}
   winScreen: {fileID: 5412815134087346036}
 --- !u!1001 &6698150752953738755
@@ -114,6 +115,11 @@ GameObject:
 --- !u!1 &5412815134087346036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1723385729871040887, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+  m_PrefabInstance: {fileID: 6698150752953738755}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6568082557206736378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 563540211924831225, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
   m_PrefabInstance: {fileID: 6698150752953738755}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7043395971693918288 stripped
