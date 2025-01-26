@@ -20,8 +20,11 @@ namespace BubbleOrNot.Runtime
 
         public void OnClick(InputAction.CallbackContext context)
         {
-            if (context.started) toolManager.OnClick(true);
-            if (context.canceled) toolManager.OnClick(false);
+            if (toolManager)
+            {
+                if (context.started) toolManager.OnClick(true);
+                if (context.canceled) toolManager.OnClick(false);
+            }
 
             if (context.started)
             {
@@ -41,6 +44,8 @@ namespace BubbleOrNot.Runtime
 
         public void OnDrop(InputAction.CallbackContext context)
         {
+            if (!toolManager) return;
+            
             if (context.started) toolManager.OnDrop(true);
             if (context.canceled) toolManager.OnDrop(false);
         }
