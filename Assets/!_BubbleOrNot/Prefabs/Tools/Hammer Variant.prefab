@@ -48,10 +48,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2415096124767890620, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 080c89f952e5f8f4ca3360c6aa6b4997, type: 2}
+    - target: {fileID: 3070207247906523994, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070207247906523994, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4920815891751291204, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       propertyPath: toolType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4920815891751291204, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
+      propertyPath: useAudio
+      value: 
+      objectReference: {fileID: 11400000, guid: 092ff1d43b500b34c9233292dec14c97, type: 2}
     - target: {fileID: 6316122361408539865, guid: fc90aee28a442d24ab69aef7ace4aac7, type: 3}
       propertyPath: m_Sprite
       value: 
