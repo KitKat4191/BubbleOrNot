@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HammerController
+  m_Controller: {fileID: 9100000, guid: 0429dfa233492c942a1a35bb396df3bf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: df0a64d80bcbcf545b46721b8c801be1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7f60ad075a8c440439d1ada1cb6c2601, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 53b92754a4a3cb04489501b9d26957c4, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 046ab6f92ff086343ad057f4e7af8ea5, type: 2}
