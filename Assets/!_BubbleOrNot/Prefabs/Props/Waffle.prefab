@@ -76,6 +76,10 @@ PrefabInstance:
       propertyPath: collisionSounds
       value: 
       objectReference: {fileID: 11400000, guid: 35999eb9d942d70418540bb02f0020ac, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: hardCollisionSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 35999eb9d942d70418540bb02f0020ac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
