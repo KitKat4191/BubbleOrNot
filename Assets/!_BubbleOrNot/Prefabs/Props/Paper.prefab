@@ -442,12 +442,16 @@ PrefabInstance:
       objectReference: {fileID: -1777662152, guid: d7e4ff6b96c593443996d6d18b7b0538, type: 3}
     - target: {fileID: 4893523895271465165, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5505522367525964520, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a472b88ffcb38da449161090667b3d2d, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: hammerSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 943c3f1b6b2353644934dee9bce2b547, type: 2}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: displaySprite
       value: 
