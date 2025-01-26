@@ -78,9 +78,8 @@ namespace BubbleOrNot.Runtime
             
             _animator.SetBool(Using, _isUsing);
             
-            if (!pressed) return;
-            
-            OnToolUsed();
+            if (pressed) OnToolUsed();
+            else OnToolStopUse();
         }
         
         private static bool TryGetProp(Collider2D other, out Prop prop)
@@ -93,6 +92,11 @@ namespace BubbleOrNot.Runtime
         {
             if (useAudio) AudioManager.Instance.Play(useAudio);
             if (_currentProp) _currentProp.OnToolUsed(toolType);
+        }
+
+        private void OnToolStopUse()
+        {
+            if (_currentProp) _currentProp.OnToolStopUse();
         }
     }
 }
