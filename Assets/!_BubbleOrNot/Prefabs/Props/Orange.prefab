@@ -588,6 +588,10 @@ PrefabInstance:
       propertyPath: displaySprite
       value: 
       objectReference: {fileID: -46876142, guid: 4943cb99bc8d68245bcf72f8e333641f, type: 3}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: hardCollisionSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 35999eb9d942d70418540bb02f0020ac, type: 2}
     - target: {fileID: 6391408311321059890, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Radius
       value: 0.2
