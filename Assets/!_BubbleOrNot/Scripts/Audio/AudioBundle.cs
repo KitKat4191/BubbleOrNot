@@ -9,6 +9,12 @@ namespace BubbleOrNot.Runtime.Audio
     {
         [Header("Settings")]
         [SerializeField] private AudioClip[] audioClips;
+        [Range(0, 1)]
+        [SerializeField] private float[] volumes;
+        
+        [Space]
+        [Range(0, 1)]
+        [SerializeField] private float masterVolume;
         
         [Space]
         [SerializeField] private bool randomizePitch;
@@ -53,6 +59,18 @@ namespace BubbleOrNot.Runtime.Audio
                 
                 return clipToReturn;
             }
+        }
+
+        public float GetVolumeForClip(AudioClip clip)
+        {
+            if (!clip) return 1;
+            
+            int index = System.Array.IndexOf(audioClips, clip);
+            if (index < 0) return 1;
+
+            if (index >= volumes.Length) return masterVolume;
+
+            return volumes[index] * masterVolume;
         }
     }
 }
