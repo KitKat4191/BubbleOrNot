@@ -45,7 +45,7 @@ namespace BubbleOrNot.Runtime
 
         private void AnsweredCorrectly(bool wasCorrect)
         {
-            if (_answersSubmitted > _maxScore) return;
+            if (_answersSubmitted >= _maxScore) return;
             
             _answersSubmitted++;
             if (wasCorrect) _score++;
