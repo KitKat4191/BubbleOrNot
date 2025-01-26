@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1635126611095737109, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Name
-      value: BasketBall Variant
+      value: BasketBall
       objectReference: {fileID: 0}
     - target: {fileID: 4893523895271465165, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Sprite
@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: collisionSounds
       value: 
       objectReference: {fileID: 11400000, guid: f1b8ccda384b5c443b64503a167954fb, type: 2}
+    - target: {fileID: 6391408311321059890, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
