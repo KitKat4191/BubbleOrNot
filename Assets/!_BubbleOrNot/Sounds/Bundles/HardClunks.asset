@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: daaf5530b4fefab40b58c85dbff630fa, type: 3}
-  m_Name: Clunks
+  m_Name: HardClunks
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 0df140c32afe2c24b9721cb6d8783984, type: 3}
