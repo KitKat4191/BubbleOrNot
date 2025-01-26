@@ -68,7 +68,7 @@ namespace BubbleOrNot.Runtime.Audio
             int index = System.Array.IndexOf(audioClips, clip);
             if (index < 0) return 1;
 
-            if (index >= volumes.Length) return 1;
+            if (index >= volumes.Length) return masterVolume;
 
             return volumes[index] * masterVolume;
         }
