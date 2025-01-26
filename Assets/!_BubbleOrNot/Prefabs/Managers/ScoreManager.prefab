@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propManager: {fileID: 0}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 7134113208031833459}
   gameOverScreen: {fileID: 6568082557206736378}
   loseScreen: {fileID: 4613943934830851344}
   winScreen: {fileID: 5412815134087346036}
@@ -61,6 +61,14 @@ PrefabInstance:
     - target: {fileID: 563540211924831225, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
       propertyPath: m_Name
       value: WinLose
+      objectReference: {fileID: 0}
+    - target: {fileID: 563540211924831225, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898132070592473945, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4416825957120810579, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -102,6 +110,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4608847857766255472, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_text
+      value: You got {_score} / {_maxScore} correct!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608847857766255472, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059947443206037252, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032313366820969387, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -127,3 +179,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4416825957120810579, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
   m_PrefabInstance: {fileID: 6698150752953738755}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7134113208031833459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4608847857766255472, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+  m_PrefabInstance: {fileID: 6698150752953738755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

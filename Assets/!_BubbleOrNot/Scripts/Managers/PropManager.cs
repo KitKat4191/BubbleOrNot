@@ -78,8 +78,7 @@ namespace BubbleOrNot.Runtime
             if (_currentPropIndex >= props.Length)
             {
                 Debug.Log("No more props!");
-                _currentPropIndex = 0;
-                props.Shuffle();
+                return;
             }
             
             Prop newProp = Instantiate(props[_currentPropIndex], propDispenser.position, propDispenser.rotation, propDispenser);
