@@ -62,6 +62,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLose
       objectReference: {fileID: 0}
+    - target: {fileID: 563540211924831225, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4416825957120810579, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -101,6 +105,10 @@ PrefabInstance:
     - target: {fileID: 4416825957120810579, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032313366820969387, guid: 4313abb5ab776194085a8965f37b0f82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
