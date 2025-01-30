@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1635126611095737109, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5505522367525964520, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: m_Controller
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: hammerSounds
       value: 
       objectReference: {fileID: 11400000, guid: 1fc4de11206d05a4385039967518d563, type: 2}
+    - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
+      propertyPath: needleSounds
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d8092bbcb75bc04da9c962d05365798, type: 2}
     - target: {fileID: 6074805435541134893, guid: 2851e6416d84dbe4e919ab49a7614045, type: 3}
       propertyPath: displaySprite
       value: 
@@ -102,7 +106,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: d0b7c51bdc7319043b1a2cff1f6cfddf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
