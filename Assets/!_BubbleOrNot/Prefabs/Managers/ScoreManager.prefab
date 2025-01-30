@@ -50,12 +50,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 6568082557206736378}
   loseScreen: {fileID: 4613943934830851344}
   winScreen: {fileID: 5412815134087346036}
-  objectsToDisableOnGameOver:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  objectsToDisableOnGameOver: []
 --- !u!1001 &6698150752953738755
 PrefabInstance:
   m_ObjectHideFlags: 0
