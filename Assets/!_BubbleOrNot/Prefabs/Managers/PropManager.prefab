@@ -755,6 +755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LightBulb
       objectReference: {fileID: 0}
+    - target: {fileID: 152618747701509672, guid: 240948aaa70c7094dac626ea077c9fd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1853112822240556082, guid: 240948aaa70c7094dac626ea077c9fd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.49178302
